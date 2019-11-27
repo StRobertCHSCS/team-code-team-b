@@ -1,0 +1,19 @@
+ #include <PRIZM.h>    // include the PRIZM library in the sketch
+  PRIZM prizm;          // instantiate a PRIZM object “prizm” so we can use its functions
+
+void setup() {        
+
+  prizm.PrizmBegin();   // Initialize the PRIZM controller
+}
+
+void loop() {
+   prizm.setMotorSpeeds(200, -200);
+
+   delay(3000);
+
+   prizm.setMotorSpeeds(-200, 200);
+
+   delay(3000);
+
+   prizm.PrizmEnd();
+}
