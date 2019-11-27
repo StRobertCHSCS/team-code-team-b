@@ -1,0 +1,26 @@
+#include <PRIZM.h>
+
+PRIZM prizm;
+
+
+
+
+void setup() {
+
+  prizm.PrizmBegin();
+  
+
+}
+
+void loop() {
+
+  prizm.setMotorTargets(360,1440,360,-1440);
+
+  delay(3437.75);
+
+  prizm.setMotorTargets(-360,-1440,-360,1440);
+
+  delay(1145.92);
+
+  prizm.PrizmEnd();
+  }
