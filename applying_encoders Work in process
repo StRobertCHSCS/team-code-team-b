@@ -1,6 +1,6 @@
-#include <PRIZM.h>
+#include <PRIZM.h>    // Include PRIZM Library
 
-PRIZM prizm;
+PRIZM prizm;          // Instantiate an object named prizm
 
 
 
@@ -8,19 +8,21 @@ PRIZM prizm;
 void setup() {
 
   prizm.PrizmBegin();
+  prizm.setMotorInvert(2,1);
   
-
 }
 
 void loop() {
 
-  prizm.setMotorTargets(360,1440,360,-1440);
+  prizm.setMotorDegrees(720,4126,720,4126);
 
-  delay(3437.75);
+  delay(3272.727);
 
-  prizm.setMotorTargets(-360,-1440,-360,1440);
+  prizm.resetEncoders();
 
-  delay(1145.92);
+  prizm.setMotorDegrees(-720,-1376,-720,-1376);
+
+  delay(1150);
 
   prizm.PrizmEnd();
   }
